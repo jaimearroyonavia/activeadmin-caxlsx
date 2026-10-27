@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.1
+## 2.2.0
 
 - Register the xlsx extension in `config.to_prepare` instead of an initializer.
   Fixes boot on Rails 7 (`NameError: InheritedResources::Base`).
