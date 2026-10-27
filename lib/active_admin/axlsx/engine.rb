@@ -4,7 +4,7 @@ module ActiveAdmin
     class Engine < ::Rails::Engine
       engine_name 'active_admin_xlsx'
 
-      initializer 'active_admin.xlsx', group: :all do
+      config.to_prepare do
         if Mime::Type.lookup_by_extension(:xlsx).nil?
           # The mime type to be used in respond_to |format| style web-services in rails
           Mime::Type.register "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", :xlsx
